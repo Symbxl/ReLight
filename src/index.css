@@ -1,6 +1,6 @@
 .NightMode {
-  background-color:#0e1320;
-  color: white;
+  background-color:#0d1117;
+  color: #8c8c8d;
 }
 
 .LightMode {
@@ -9,5 +9,7 @@
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: black;
+    background-color: #FFFBFF;
 }

@@ -22,7 +22,7 @@ const Modal = ({ isOpen, children, handleClose }: any) => {
   border: none;
   font-size: 20px;
   background-color: transparent;
-  color: ${nightMode ? "#FFFBFF" : "#0e1320"}
+  color: ${nightMode ? "#FFFBFF" : "#0e1320"};
 `
 
   return (<>

@@ -6,9 +6,9 @@ import Settings from "./theme/Settings";
 import Button from "../common/Button";
 import styled from "styled-components"
 import { AiFillHome, AiFillContacts } from "react-icons/ai"
-import { MdBuildCircle } from "react-icons/md"
-import { RiPriceTag3Fill } from "react-icons/ri"
-
+import { ImPriceTags } from "react-icons/im"
+import { FaTools } from "react-icons/fa"
+import { BsFillLightbulbFill } from "react-icons/bs"
 const MainNavigation = () => {
   const { nightMode } = useNightMode()
   const { theme } = useTheme()
@@ -16,8 +16,9 @@ const MainNavigation = () => {
   const Link = styled(link)`
   color: ${nightMode ? "white" : "black"};
   text-decoration: none;
+  padding: 0.2rem;
 `
-  const media = "@media(max-width: 900px)"
+  const media = "@media(max-width: 1100px)"
 
   const List = styled.ul`
   display: flex;
@@ -32,16 +33,19 @@ const MainNavigation = () => {
   const LinkColor = styled(Link)`
       color: ${theme};
       font-size: 22px;
+      font-weight: 400;
+      font-family: "General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   `
 
   return (
     <List>
-      <Item><LinkColor to="/">Devicery</LinkColor></Item>
+      <Item><LinkColor to="/"> ReLight</LinkColor></Item>
       <Container>
         <Item><Link to="/"> <AiFillHome /> Home</Link></Item>
-        <Item><Link to="/services"> <MdBuildCircle /> Services</Link></Item>
-        <Item><Link to="/pricing"><RiPriceTag3Fill />Pricing & Payment</Link></Item>
-        <Item><Link to="/contact"><AiFillContacts /> Contact Us</Link></Item>
+        <Item><Link to="/services">Services</Link></Item>
+        <Item><Link to="/services">Animations</Link></Item>
+        <Item><Link to="/gallery">Gallery</Link></Item>
+        <Item><Link to="/contact">Contact</Link></Item>
       </Container>
       <RightContainer>
         <Item><NightModeButton /></Item>

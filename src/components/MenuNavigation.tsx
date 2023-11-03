@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import { useState } from 'react';
 import Settings from './theme/Settings';
-import DarkButton from '../common/DarkButton';
-import LightButton from '../common/LightButton';
 
 const MenuNavigation = () => {
   const { theme } = useTheme()
@@ -19,39 +17,50 @@ const MenuNavigation = () => {
   const LinkColor = styled(Link)`
   color: ${theme};
   text-decoration: none;
-  margin: 1rem;
-  font-size: 22px;
+  font-size: 15px;
+  padding: 1.2rem 0;
+  margin: 0.5rem;
 `
   return (
     <Container>
-      <LinkColor to="/">Devicery</LinkColor>
+      <LinkColor to="/">ReLight</LinkColor>
       <Span>
-        <Button padding="10px 20px">contact</Button>
+        <Button padding="10px 20px">Contact</Button>
         <Menu onClick={handleClick} />
       </Span>
       <Modal isOpen={isOpen} handleClose={handleClose}>
-        <Container>
+        <ContainerTwo>
           <Settings />
-          <LightButton />
-          <DarkButton />
-        </Container>
+          <LinkColor to="/home">Home</LinkColor>
+          <LinkColor to="/services">Services</LinkColor>
+          <LinkColor to="/animations">Animations</LinkColor>
+          <LinkColor to="/gallery">Gallery</LinkColor>
+          <LinkColor to="/contact">Contact</LinkColor>
+        </ContainerTwo>
       </Modal>
-
     </Container>
   );
 }
 
 export default MenuNavigation;
 
-const media = "@media(min-width: 900px)"
+const media = "@media(min-width: 1100px)"
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
   ${media} {
     display: none;
   }
+`
+
+
+const ContainerTwo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `
 
 const Span = styled.span`
