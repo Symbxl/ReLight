@@ -67,6 +67,7 @@ const ContainerTwo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
 `
 
 const Span = styled.span`

@@ -8,7 +8,7 @@ const Header = () => {
         <Title>Lighting Up Washington, all year long!</Title>
         <Description>
           Have everyones face light up when viewing your beautiful glowing home. Request a quote and light up your home today!</Description>
-        <Button height="50px" width="200px">
+        <Button height="50px" width="200px" >
           Request a Quote
         </Button>
       </Container>

@@ -12,7 +12,7 @@ const ServiceHeader = () => {
           app, or if you just have any general questions, we are here to help.
         </Description>
         <ButtonWrapper>
-          <Button padding="13px 33px" align-self="center" >Request a quote</Button>
+          <Button padding="13px 33px" align-self="center">Request a quote</Button>
         </ButtonWrapper>
       </Container>
     </Section>
