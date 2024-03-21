@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import { useTheme } from "../context/ThemeProvider"
+import { Link } from "react-router-dom"
 
 const Button = ({ children, width, height, padding, margin }: any) => {
   const { theme } = useTheme()
 
-  const Btn = styled.button`
+  const Btn = styled(Link)`
   background-color: ${theme};
   border: none;
   border-radius: 5px;
@@ -16,7 +17,7 @@ const Button = ({ children, width, height, padding, margin }: any) => {
 `
 
   return (
-    <Btn>{children}</Btn>
+    <Btn to="/contact">{children}</Btn>
   )
 }
 
