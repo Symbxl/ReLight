@@ -23,7 +23,7 @@ const MenuNavigation = () => {
 `
   return (
     <Container>
-      <LinkColor to="/">ReLight</LinkColor>
+      <LinkColor to="/"><Img src="https://i.imgur.com/KUEzFqL.png" /></LinkColor>
       <Span>
         <Button padding="10px 20px">Contact</Button>
         <Menu onClick={handleClick} />
@@ -54,6 +54,12 @@ const Container = styled.div`
   ${media} {
     display: none;
   }
+`
+
+const Img = styled.img`
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
 `
 
 

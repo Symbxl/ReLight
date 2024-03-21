@@ -29,6 +29,7 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   margin-bottom: 4rem;
+  width: 100vw;
 `
 
 const Description = styled.p`

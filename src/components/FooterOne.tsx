@@ -6,16 +6,16 @@ const FooterOne = () => {
   return (
     <FooterContainer>
       <SocialIcons>
-        <a href="https://facebook.com/homerelight" target="_blank" rel="noopener noreferrer">
+        <a href="https://facebook.com/Relight" target="_blank" rel="noopener noreferrer">
           <FaFacebook size={30} />
         </a>
-        <a href="https://instagram.com/homerelight" target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <FaInstagram size={30} />
         </a>
-        <a href="https://x.com/homerelight.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <FaTwitter size={30} />
         </a>
-        <a href="https://tiktok.com/homerelight.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
           <FaTiktok size={30} />
         </a>
       </SocialIcons>
@@ -27,6 +27,7 @@ const FooterOne = () => {
 export default FooterOne;
 
 const FooterContainer = styled.footer`
+  color: #fff;
   padding: 20px;
   text-align: center;
 `;
@@ -37,7 +38,7 @@ const SocialIcons = styled.div`
   align-items: center;
 
   a {
-    color: black;
+    color: #fff;
     margin: 0 10px;
     transition: color 0.3s ease;
 

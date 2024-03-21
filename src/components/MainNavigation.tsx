@@ -28,6 +28,7 @@ const MainNavigation = () => {
   ${media} {
     display: none;
   }
+
 `
 
   const LinkColor = styled(Link)`
@@ -39,11 +40,11 @@ const MainNavigation = () => {
 
   return (
     <List>
-      <Item><LinkColor to="/"> ReLight</LinkColor></Item>
+      <Item><LinkColor to="/"> <Img src="https://i.imgur.com/KUEzFqL.png" /></LinkColor></Item>
       <Container>
-        <Item><Link to="/"> <AiFillHome /> Home</Link></Item>
+        <Item><Link to="/"> <Home /> Home</Link></Item>
         <Item><Link to="/services">Services</Link></Item>
-        <Item><Link to="/services">Animations</Link></Item>
+        <Item><Link to="/pricing">Pricing</Link></Item>
         <Item><Link to="/gallery">Gallery</Link></Item>
         <Item><Link to="/contact">Contact</Link></Item>
       </Container>
@@ -58,6 +59,16 @@ const MainNavigation = () => {
 
 export default MainNavigation;
 
+const Home = styled(AiFillHome)`
+  height: 13px;
+  width: 13px;
+`
+
+const Img = styled.img`
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+`
 
 const Item = styled.li`
   padding: 0.7rem;

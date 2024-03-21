@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useTheme } from "../context/ThemeProvider"
 
-const Button = ({ children, width, height, padding }: any) => {
+const Button = ({ children, width, height, padding, margin }: any) => {
   const { theme } = useTheme()
 
   const Btn = styled.button`
@@ -9,6 +9,7 @@ const Button = ({ children, width, height, padding }: any) => {
   border: none;
   border-radius: 5px;
   padding: ${padding};
+  margin: ${margin};
   width: ${width};
   height: ${height};
   color: white;

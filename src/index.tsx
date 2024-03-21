@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <NightModeProvider>
       <ThemeProvider>
-        <RouterProvider router={config} />
+        <RouterProvider router={config} /> 
       </ThemeProvider>
     </NightModeProvider>
   </React.StrictMode>,
