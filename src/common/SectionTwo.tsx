@@ -28,7 +28,7 @@ const Section = styled.section`
   width: 100vw;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   width: 100vw;
 `
 

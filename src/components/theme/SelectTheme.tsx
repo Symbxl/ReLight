@@ -16,7 +16,6 @@ const SelectTheme = () => {
     border-radius: 5px;
     margin: 1rem;
     padding: 5px 10px;
-    font-size: 12px;
   `
 
   return (

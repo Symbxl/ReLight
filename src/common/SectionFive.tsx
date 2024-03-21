@@ -39,7 +39,7 @@ const Section = styled.section`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  margin: 2rem;
+  margin-bottom: 4rem;
 `;
 
 const ContentContainer = styled.div`
