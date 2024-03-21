@@ -14,6 +14,11 @@ const Button = ({ children, width, height, padding, margin }: any) => {
   width: ${width};
   height: ${height};
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
 `
 
   return (

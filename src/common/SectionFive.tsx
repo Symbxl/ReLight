@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useNightMode } from '../context/NightModeProvider';
-
+import { useTheme } from "../context/ThemeProvider";
 interface Props {
   title: string;
   description: string;
@@ -11,6 +11,14 @@ interface Props {
 
 const SectionFour = ({ title, description, image, left, right }: Props) => {
   const { nightMode } = useNightMode();
+  const { theme } = useTheme()
+
+  const Title = styled.h2`
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: ${theme};
+`;
 
   return (
     <Section>
@@ -31,7 +39,7 @@ const Section = styled.section`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 2rem;
+  margin: 2rem;
 `;
 
 const ContentContainer = styled.div`
@@ -41,12 +49,6 @@ const ContentContainer = styled.div`
   justify-content: center;
   max-width: 500px;
   width: 100%;
-`;
-
-const Title = styled.h2`
-  font-weight: 500;
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
 `;
 
 const Description = styled.p<{ nightMode: boolean }>`

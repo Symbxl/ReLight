@@ -1,8 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from 'react-icons/fa';
+import { useTheme } from '../context/ThemeProvider';
 
 const FooterOne = () => {
+  const { theme } = useTheme()
+
+  const SocialIcons = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: ${theme};
+    margin: 0 10px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffd700; /* change color on hover */
+    }
+  }
+`;
+
   return (
     <FooterContainer>
       <SocialIcons>
@@ -31,21 +50,6 @@ const FooterContainer = styled.footer`
   text-align: center;
 `;
 
-const SocialIcons = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    color: black;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: #ffd700; /* change color on hover */
-    }
-  }
-`;
 
 const Copyright = styled.p`
   margin-top: 10px;

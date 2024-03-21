@@ -31,9 +31,9 @@ const MenuNavigation = () => {
       <Modal isOpen={isOpen} handleClose={handleClose}>
         <ContainerTwo>
           <Settings />
-          <LinkColor to="/home">Home</LinkColor>
+          <LinkColor to="/">Home</LinkColor>
           <LinkColor to="/services">Services</LinkColor>
-          <LinkColor to="/animations">Animations</LinkColor>
+          <LinkColor to="/pricing">Pricing</LinkColor>
           <LinkColor to="/gallery">Gallery</LinkColor>
           <LinkColor to="/contact">Contact</LinkColor>
         </ContainerTwo>

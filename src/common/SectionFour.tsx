@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useTheme } from '../context/ThemeProvider';
-import AnimationCard from "./cards/AnimationsCard";
+import AnimationCard from "../components/cards/AnimationsCard";
 import Button from "../common/Button";
 
 const SectionFive = () => {
