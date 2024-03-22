@@ -1,5 +1,5 @@
-import styled from "styled-components";
-
+import { useTheme } from "../../context/ThemeProvider";
+import styled from "styled-components"
 interface Service {
   number: JSX.Element | number;
   title: string;
@@ -11,7 +11,23 @@ interface Props {
 }
 
 const ServicesCard = ({ services }: Props) => {
+  const { theme } = useTheme()
+
+  const NumberCircle = styled.div`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: ${theme};
+  color: #333333;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
   return (
+
     <CardContainer>
       {services.map((service, index) => (
         <ServiceItem key={index}>
@@ -42,20 +58,6 @@ const ServiceItem = styled.div`
   width: 600px;
   height: 100%;
   background-color: #ffffff;
-`;
-
-const NumberCircle = styled.div`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  color: #333333;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Title = styled.h3`

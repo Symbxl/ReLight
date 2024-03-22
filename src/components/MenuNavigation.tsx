@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import { useState } from 'react';
 import Settings from './theme/Settings';
+import NightModeButton from '../common/NightModeButton';
 
 const MenuNavigation = () => {
   const { theme } = useTheme()
@@ -21,6 +22,20 @@ const MenuNavigation = () => {
   padding: 1.2rem 0;
   margin: 0.5rem;
 `
+
+  const RightContainer = styled.span`
+  height: 10vh;
+  width: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+  const Item = styled.li`
+  padding: 0.7rem;
+`
+
+
   return (
     <Container>
       <LinkColor to="/"><Img src="https://i.imgur.com/KUEzFqL.png" /></LinkColor>
@@ -29,8 +44,7 @@ const MenuNavigation = () => {
         <Menu onClick={handleClick} />
       </Span>
       <Modal isOpen={isOpen} handleClose={handleClose}>
-        <ContainerTwo>
-          <Settings />
+        <ContainerTwo onClick={handleClose}>
           <LinkColor to="/">Home</LinkColor>
           <LinkColor to="/services">Services</LinkColor>
           <LinkColor to="/pricing">Pricing</LinkColor>
@@ -67,7 +81,7 @@ const ContainerTwo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 100%;
+  width: 500px;
 `
 
 const Span = styled.span`

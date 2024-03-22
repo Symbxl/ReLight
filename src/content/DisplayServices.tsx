@@ -2,8 +2,10 @@ import ServicesCard from "../components/cards/ServicesCard";
 import styled from "styled-components"
 import { PiHeadsetBold } from "react-icons/pi"
 import { AiFillRocket, AiOutlineTool } from "react-icons/ai"
+import { useTheme } from "../context/ThemeProvider";
 
-const DisplayServices = ({}) => {
+const DisplayServices = ({ }) => {
+
   const service = [
     { number: <PiHeadsetBold />, title: "24/7 Support", desc: "ReLight Outdoor Lighting works with a team of professionals to ensure full customer support. If you experience any issues with our product please contact us via phone or email for assistance." },
     { number: <AiFillRocket />, title: "Quick delivery", desc: "ReLight Outdoor Lighting has a dedicated service team in Grande Prairie. Our team is trained to provide professional installation on the same service day." },
