@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Button from '../common/Button';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { useTheme } from '../context/ThemeProvider';
 import { Link } from 'react-router-dom';
@@ -22,6 +21,7 @@ const MenuNavigation = () => {
     font-size: 15px;
     padding: 1.2rem 0;
     margin: 0.5rem;
+    font-weight: 520;
   `;
 
   const Item = styled.div`

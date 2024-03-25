@@ -1,9 +1,9 @@
-import DisplayPricing from "../content/DisplayPricing";
+import ServiceHeader from "../components/ServiceHeader";
 import DisplayServices from "../content/DisplayServices";
 const PricingPage = () => {
   return (<>
-    <DisplayPricing />
-    <DisplayServices one={true} />
+    <ServiceHeader />
+    <DisplayServices />
   </>);
 }
 

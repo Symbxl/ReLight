@@ -7,11 +7,11 @@ const Modal = ({ isOpen, children, handleClose }: any) => {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 750px;
+  height: 600px;
   width: 400px;
   display: flex;
   flex-direction: column;
-  background-color: ${nightMode ? "#0d111eee" : "#ffffff"};
+  background-color: ${nightMode ? "#0d111eee" : "#f3f3f3ee"};
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  `
 
   const Close = styled.button`
