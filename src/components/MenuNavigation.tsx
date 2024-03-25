@@ -5,8 +5,8 @@ import { useTheme } from '../context/ThemeProvider';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import { useState } from 'react';
-import Settings from './theme/Settings';
 import NightModeButton from '../common/NightModeButton';
+import Phone from "../common/Phone"
 
 const MenuNavigation = () => {
   const { theme } = useTheme()
@@ -23,14 +23,6 @@ const MenuNavigation = () => {
   margin: 0.5rem;
 `
 
-  const RightContainer = styled.span`
-  height: 10vh;
-  width: 275px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
   const Item = styled.li`
   padding: 0.7rem;
 `
@@ -39,10 +31,12 @@ const MenuNavigation = () => {
   return (
     <Container>
       <LinkColor to="/"><Img src="https://i.imgur.com/KUEzFqL.png" /></LinkColor>
-      <Span>
-        <Button padding="10px 20px">Contact</Button>
+      <ContainerOne>
+        <Item><NightModeButton /></Item>
+        <Item><Phone /> </Item>
+        <Button width="30px 20px" height="10px 20px">Contact</Button>
         <Menu onClick={handleClick} />
-      </Span>
+      </ContainerOne>
       <Modal isOpen={isOpen} handleClose={handleClose}>
         <ContainerTwo onClick={handleClose}>
           <LinkColor to="/">Home</LinkColor>
@@ -69,7 +63,11 @@ const Container = styled.div`
     display: none;
   }
 `
-
+const ContainerOne = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`
 const Img = styled.img`
   height: 40px;
   width: 40px;
@@ -83,12 +81,6 @@ const ContainerTwo = styled.div`
   justify-content: space-evenly;
   width: 500px;
 `
-
-const Span = styled.span`
-  display: flex;
-  align-items: center;
-`
-
 const Menu = styled(HiOutlineMenu)`
   font-size: 25px;
   margin: 1rem;
