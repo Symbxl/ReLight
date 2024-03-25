@@ -2,12 +2,12 @@ import styled from "styled-components"
 import { useTheme } from "../context/ThemeProvider"
 import { Link } from "react-router-dom"
 
-const Button = ({ children, width, height, padding, margin, handleClose }: any) => {
+const Button = ({ children, border, width, height, padding, margin, handleClose }: any) => {
   const { theme } = useTheme()
 
   const Btn = styled(Link)`
   background-color: ${theme};
-  border: none;
+  border: ${border};
   border-radius: 5px;
   padding: ${padding};
   margin: ${margin};
@@ -26,3 +26,4 @@ const Button = ({ children, width, height, padding, margin, handleClose }: any) 
 }
 
 export default Button;
+

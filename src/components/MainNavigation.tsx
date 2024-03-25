@@ -6,7 +6,7 @@ import Button from "../common/Button";
 import styled from "styled-components"
 import { AiFillHome } from "react-icons/ai"
 import Phone from "../common/Phone"
-
+import Email from "../common/Email"
 
 const MainNavigation = () => {
   const { nightMode } = useNightMode()
@@ -50,6 +50,7 @@ const MainNavigation = () => {
       <RightContainer>
         <Item><NightModeButton /></Item>
         <Item><Phone /> </Item>
+        <Item><Email /></Item>
         <Button padding="10px 23px">Contact</Button>
       </RightContainer>
     </List>

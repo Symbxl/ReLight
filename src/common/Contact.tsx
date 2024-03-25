@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { useTheme } from "../context/ThemeProvider";
-import { PiPhoneCallFill } from "react-icons/pi";
-
-export default function LightButton() {
+import { Link } from "react-router-dom"
+export default function ContactButton() {
   const { theme } = useTheme();
 
-  const Button = styled.button`
+  const StyledLink = styled(Link)`
     font-size: 25px;
     display: flex;
     align-items: center;
@@ -19,14 +18,5 @@ export default function LightButton() {
     outline: none;
   `;
 
-  const handleClick = () => {
-    window.location.href = "tel:4254651290";
-  };
-
-  return (
-    <Button onClick={handleClick}>
-      <PiPhoneCallFill />
-    </Button>
-  );
+  return <StyledLink to="/contact">Contact</StyledLink>
 }
-

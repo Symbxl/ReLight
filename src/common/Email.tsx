@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useTheme } from "../context/ThemeProvider";
-import { PiPhoneCallFill } from "react-icons/pi";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 export default function LightButton() {
   const { theme } = useTheme();
@@ -20,12 +20,12 @@ export default function LightButton() {
   `;
 
   const handleClick = () => {
-    window.location.href = "tel:4254651290";
+    window.location.href = "mailto:inquiezach@gmail.com";
   };
 
   return (
     <Button onClick={handleClick}>
-      <PiPhoneCallFill />
+      <MdOutlineMailOutline />
     </Button>
   );
 }

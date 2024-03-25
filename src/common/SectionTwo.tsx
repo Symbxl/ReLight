@@ -24,8 +24,6 @@ export default SectionTwo;
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  height: 25vh;
-  width: 100vw;
   align-items: center;
   justify-content: center;
   margin: 4rem 0;
