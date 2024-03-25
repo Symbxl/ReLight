@@ -2,13 +2,12 @@ import { Link as link } from "react-router-dom";
 import { useNightMode } from "../context/NightModeProvider";
 import { useTheme } from "../context/ThemeProvider";
 import NightModeButton from "../common/NightModeButton";
-import Settings from "./theme/Settings";
 import Button from "../common/Button";
 import styled from "styled-components"
-import { AiFillHome, AiFillContacts } from "react-icons/ai"
-import { ImPriceTags } from "react-icons/im"
-import { FaTools } from "react-icons/fa"
-import { BsFillLightbulbFill } from "react-icons/bs"
+import { AiFillHome } from "react-icons/ai"
+import Phone from "../common/Phone"
+
+
 const MainNavigation = () => {
   const { nightMode } = useNightMode()
   const { theme } = useTheme()
@@ -50,7 +49,7 @@ const MainNavigation = () => {
       </Container>
       <RightContainer>
         <Item><NightModeButton /></Item>
-        <Item><Settings /></Item>
+        <Item><Phone /> </Item>
         <Button padding="10px 23px">Contact</Button>
       </RightContainer>
     </List>

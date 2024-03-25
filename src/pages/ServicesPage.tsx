@@ -5,7 +5,7 @@ import Table from "../components/Table"
 const ServicesPage = () => {
   return (<>
     <ServiceHeader />
-    <DisplayServices />
+    <DisplayServices one={true} two={true} />
     <Table />
 
   </>);

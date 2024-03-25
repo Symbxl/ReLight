@@ -4,7 +4,7 @@ import { FiMoon } from 'react-icons/fi';
 import { useTheme } from "../context/ThemeProvider";
 
 export default function LightButton() {
-  const { nightMode, setNightMode } = useNightMode();
+  const { setNightMode } = useNightMode();
   const { theme } = useTheme()
 
   const Button = styled.button`
