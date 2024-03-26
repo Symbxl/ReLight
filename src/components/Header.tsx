@@ -72,4 +72,4 @@ const responsiveStyles = `
 
 const mediaQuery = `@media (max-width: ${mobileBreakpoint}) {
   ${responsiveStyles}
-}`;
+}`;   

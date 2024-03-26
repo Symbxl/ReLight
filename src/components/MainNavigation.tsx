@@ -1,7 +1,6 @@
 import { Link as link } from "react-router-dom";
 import { useNightMode } from "../context/NightModeProvider";
 import { useTheme } from "../context/ThemeProvider";
-import NightModeButton from "../common/NightModeButton";
 import Button from "../common/Button";
 import styled from "styled-components"
 import { AiFillHome } from "react-icons/ai"
