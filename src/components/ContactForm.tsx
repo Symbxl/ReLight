@@ -1,5 +1,6 @@
 import { useForm, Controller } from 'react-hook-form';
 import styled from 'styled-components';
+import { useTheme } from '../context/ThemeProvider';
 
 interface FormData {
   name: string;
@@ -11,6 +12,40 @@ interface FormData {
 
 const ContactForm = () => {
   const { handleSubmit, control } = useForm<FormData>();
+  const { theme } = useTheme()
+
+
+  const SubmitButton = styled.button`
+width: 100%;
+padding: 12px;
+border: none;
+border-radius: 5px;
+background-color: white;
+color: ${theme};
+border: 3px solid ${theme};
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+`;
+
+  const Title = styled.h2`
+  font-size: 35px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+  text-align: center;
+  color: ${theme};
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+`;
+
+
+  const FormContainer = styled.form`
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px ${theme};
+`;
 
   const api = 'https://decisive-balance-1f853ee862.strapiapp.com/api/contacts';
 
@@ -109,22 +144,6 @@ const Container = styled.section`
   height: 80vh;
 `;
 
-const FormContainer = styled.form`
-  width: 90%;
-  max-width: 500px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-`;
-
-const Title = styled.h2`
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-  color: black;
-`;
 
 const FormSection = styled.div`
   display: flex;
@@ -161,16 +180,4 @@ const TextArea = styled.textarea`
   height: 120px;
   margin-bottom: 10px;
   box-sizing: border-box;
-`;
-
-const SubmitButton = styled.button`
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: black;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
 `;

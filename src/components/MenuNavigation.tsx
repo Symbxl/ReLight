@@ -41,7 +41,7 @@ const MenuNavigation = () => {
       <Modal isOpen={isOpen} handleClose={handleClose}>
         <ContainerTwo onClick={handleClose}>
           <LinkColor to="/">Home</LinkColor>
-          <LinkColor to="/services">Services</LinkColor>
+          <LinkColor to="/services">Services & Pricing</LinkColor>
           <LinkColor to="/pricing">Pricing</LinkColor>
           <LinkColor to="/gallery">Gallery</LinkColor>
           <LinkColor to="/contact">Contact</LinkColor>
