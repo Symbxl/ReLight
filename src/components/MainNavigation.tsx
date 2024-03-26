@@ -41,8 +41,7 @@ const MainNavigation = () => {
       <Item><LinkColor to="/"> <Img src="https://i.imgur.com/KUEzFqL.png" /></LinkColor></Item>
       <Container>
         <Item><Link to="/"> <Home /> Home</Link></Item>
-        <Item><Link to="/services">Services</Link></Item>
-        <Item><Link to="/pricing">Pricing</Link></Item>
+        <Item><Link to="/services">Services & Pricing</Link></Item>
         <Item><Link to="/gallery">Gallery</Link></Item>
         <Item><Link to="/contact">Contact</Link></Item>
       </Container>

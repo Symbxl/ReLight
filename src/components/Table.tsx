@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const ProductTable = () => {
   const products = [
     {
+      Pricing: 'Unlock the potential of your new lit home at just $19 per square foot!',
       model: 'H705A',
       title: 'Govee RGBIC Permanent Outdoor Lights',
       colors: 'RGBIC',

@@ -7,7 +7,7 @@ const Modal = ({ isOpen, children, handleClose }: any) => {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 600px;
+  height: 450px;
   width: 400px;
   display: flex;
   flex-direction: column;
