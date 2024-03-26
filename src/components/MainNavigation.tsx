@@ -48,7 +48,6 @@ const MainNavigation = () => {
         <Item><Link to="/contact">Contact</Link></Item>
       </Container>
       <RightContainer>
-        <Item><NightModeButton /></Item>
         <Item><Phone /> </Item>
         <Item><Email /></Item>
         <Button padding="10px 23px">Contact</Button>
