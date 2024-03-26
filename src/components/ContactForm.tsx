@@ -45,6 +45,7 @@ cursor: pointer;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 3px ${theme};
+  margin: 1.25rem 0;
 `;
 
   const api = 'https://decisive-balance-1f853ee862.strapiapp.com/api/contacts';
