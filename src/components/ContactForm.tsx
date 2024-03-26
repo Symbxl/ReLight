@@ -143,7 +143,7 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   height: 80vh;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem 0;
 `;
 
 
