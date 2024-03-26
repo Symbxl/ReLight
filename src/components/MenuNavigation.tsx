@@ -4,7 +4,6 @@ import { useTheme } from '../context/ThemeProvider';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import { useState } from 'react';
-import NightModeButton from '../common/NightModeButton';
 import Phone from '../common/Phone';
 import Email from "../common/Email"
 
@@ -35,7 +34,6 @@ const MenuNavigation = () => {
         <Img src="https://i.imgur.com/KUEzFqL.png" />
       </LinkColor>
       <ContainerOne>
-        <Item><NightModeButton /></Item>
         <Item><Phone /></Item>
         <Item><Email /></Item>
         <Menu onClick={handleClick} />

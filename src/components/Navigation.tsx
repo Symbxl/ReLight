@@ -1,4 +1,4 @@
-import MenuNavigion from "./MenuNavigation";
+import MenuNavigation from "./MenuNavigation";
 import MainNavigation from "./MainNavigation";
 
 const Navigation = () => {
