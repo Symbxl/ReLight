@@ -24,6 +24,7 @@ const ProductTable = () => {
       <Table>
         <thead>
           <tr>
+            <Th>Pricing</Th>
             <Th>Model</Th>
             <Th>Product Title</Th>
             <Th>Colors</Th>
