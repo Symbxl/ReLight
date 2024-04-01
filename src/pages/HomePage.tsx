@@ -10,6 +10,7 @@ const HomePage = () => {
   return <>
     <Header />
     <Video />
+    <SectionOne />
     <SectionTwo title="Architectural Lighting" description="Add a touch of elegance and sophistication by replacing your pot or can lights with permanent track lighting. From sleek and modern to warm and inviting, our Architectural Lighting options offer something for every taste and style. Upgrade your home or commercial building today and experience the beauty and versatility of Architectural Lighting. With endless possibilities to choose from, you will find the perfect pattern to match any look you desire!" />
     <DisplayServices one={true} two={false} />
     <ServiceHeader />
