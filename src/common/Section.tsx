@@ -3,7 +3,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 
 import { useTheme } from "../context/ThemeProvider"
 
-const SectionOne = () => {
+const Section = () => {
   const { theme } = useTheme()
 
   const Title = styled.h2`
@@ -21,7 +21,7 @@ const SectionOne = () => {
   </Article>
 }
 
-export default SectionOne;
+export default Section;
 
 const Article = styled.article`
   display: flex;
