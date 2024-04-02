@@ -28,6 +28,7 @@ const Article = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 65vh;
+  height: auto;
   width: 100vw;
+  margin-bottom: 2rem;
 `
