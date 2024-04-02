@@ -8,7 +8,7 @@ const Modal = ({ isOpen, children, handleClose }: any) => {
   top: 0px;
   right: 0px;
   height: 450px;
-  width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: ${nightMode ? "#0d111eee" : "#f3f3f3ee"};
