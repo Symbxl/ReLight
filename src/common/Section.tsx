@@ -7,6 +7,7 @@ const Section = () => {
   const { theme } = useTheme()
 
   const Title = styled.h2`
+  font-size: 21px;
   margin: 2rem 0;
   color: ${theme};
 `
@@ -27,6 +28,6 @@ const Article = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70vh;
+  height: 65vh;
   width: 100vw;
 `

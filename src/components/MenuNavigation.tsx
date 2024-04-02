@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import { useState } from 'react';
 import Phone from '../common/Phone';
-import Email from "../common/Email"
+import Email from "../common/Email";
 
 const MenuNavigation = () => {
   const { theme } = useTheme();
@@ -25,7 +25,7 @@ const MenuNavigation = () => {
 
   const Item = styled.div`
     text-decoration: none;
-    margin-right: 10px; /* Added margin to space out items */
+    margin-right: 10px;
   `;
 
   return (
@@ -36,7 +36,7 @@ const MenuNavigation = () => {
       <ContainerOne>
         <Item><Phone /></Item>
         <Item><Email /></Item>
-        <Menu onClick={handleClick} />
+        <MenuButton onClick={handleClick} />
       </ContainerOne>
       <Modal isOpen={isOpen} handleClose={handleClose}>
         <ContainerTwo onClick={handleClose}>
@@ -58,10 +58,10 @@ const Container = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   ${media} {
     display: none;
   }
-
 `;
 
 const ContainerOne = styled.div`
@@ -81,7 +81,12 @@ const ContainerTwo = styled.div`
   justify-content: space-evenly;
 `;
 
-const Menu = styled(HiOutlineMenu)`
+const MenuButton = styled(HiOutlineMenu)`
   font-size: 25px;
   margin: 1rem;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:hover {
+    transform: translateX(-5px);
+  }
 `;
