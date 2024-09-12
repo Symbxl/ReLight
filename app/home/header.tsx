@@ -9,8 +9,14 @@ export default function Header() {
         minHeight: "45vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
-        margin: "1rem"
+        alignItems: "center",
+        margin: "1rem",
+        padding: "1rem",
+        '@media (max-width:600px)': {
+          minHeight: "auto",
+          padding: "1rem",
+          justifyContent: "center",
+        }
       }}
     >
       <Navigation />
