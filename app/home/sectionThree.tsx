@@ -46,13 +46,14 @@ const SectionThree = () => {
       <Grid container spacing={2}>
         <Grid item>
           <Button
-            variant="contained"
+            variant="outlined"
             size="large"
             sx={{
               borderRadius: '8px',
               padding: '10px 24px',
-              backgroundColor: 'primary.main',
               boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
+              background: `linear-gradient(95deg, rgba(20%, 60%, 100%, 0.5) 50%, rgba(20%, 60%, 100%, 0.9) 90%)`,
+              color: "#fff",
               '&:hover': {
                 backgroundColor: 'primary.dark',
                 boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.3)',
