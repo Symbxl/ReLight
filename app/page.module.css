@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem;
+  padding: 3rem;
   min-height: 100vh;
 }
 
@@ -35,7 +35,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(25%, auto));
+  grid-template-columns: repeat(2, minmax(33%, auto));
   max-width: 100%;
   width: var(--max-width);
 }
@@ -57,13 +57,13 @@
 .card h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .card p {
   margin: 0;
   opacity: 0.6;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   max-width: 30ch;
 }
@@ -213,6 +213,9 @@
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
+  }
+  .card h2, .card p {
+    font-size: 1rem;
   }
 }
 

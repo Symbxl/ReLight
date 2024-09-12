@@ -4,7 +4,7 @@ import { Container } from '@mui/material';
 import { SiAmazonalexa } from "react-icons/si";
 import { MdSettingsRemote } from "react-icons/md";
 
-export default function SectionTwo() {
+export default function Compatibility() {
 
   const data = [
     { id: 1, name: "Google Home", logo: <GoogleIcon /> },

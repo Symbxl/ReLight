@@ -1,17 +1,23 @@
-import Navigation from "./components/Navigation";
-import Card from "./components/Card";
+import Navigation from "./home/navbar";
 import styles from "./page.module.css";
-import SectionTwo from "./components/SectionTwo";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Footer from "./home/footer";
+import Features from "./home/features";
+import Header from "./home/header";
+import Compatibility from "./home/compatible";
+import Section from "./home/section";
+import Gallery from "./home/gallery";
+import SectionTwo from "./home/sectionTwo";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <Navigation />
       <Header />
-      <Card />
+      <Section />
+      <Gallery />
       <SectionTwo />
+      <Features />
+      <Compatibility />
       <Footer />
     </main>
   );
