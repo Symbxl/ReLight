@@ -6,10 +6,11 @@ export default function Header() {
   return (
     <Container
       sx={{
-        minHeight: "85vh",
+        minHeight: "45vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        margin: "1rem"
       }}
     >
       <Navigation />
