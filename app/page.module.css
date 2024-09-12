@@ -32,13 +32,18 @@
   font-weight: 700;
   font-family: var(--font-mono);
 }
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(33%, auto));
-  max-width: 100%;
-  width: var(--max-width);
+  grid-template-columns: repeat(2, 1fr); /* Adjust as needed */
+  gap: 1rem; /* Space between items */
 }
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .card {
   padding: 1rem 3rem;

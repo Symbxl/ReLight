@@ -1,6 +1,6 @@
 import SectionThree from "./sectionThree";
-import { Container } from "@mui/material";
 import Navigation from "./navbar";
+import { Container } from "@mui/material";
 
 export default function Header() {
   return (
