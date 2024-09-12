@@ -1,27 +1,26 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
-const Section = () => {
+const Section = ({ title, sz }: any) => {
   return (
     <Container
       sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "flex-start",
+        alignItems: "center",
         height: "5vh",
         textAlign: "left",
         paddingX: 2,
+        margin: 1,
       }}
     >
       <Typography
-        fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-        fontWeight="500"
-        fontSize="1.1rem"
+        fontWeight="700"
+        fontSize="1.3rem"
         variant="h2"
-        color="hsl(210, 100%, 60%)"
-        sx={{ mb: 2 }} // Margin-bottom for spacing
+        sx={{ mb: 2, fontSize: sz }}
       >
-        Shop by use case
+        {title}
       </Typography>
     </Container>
   );

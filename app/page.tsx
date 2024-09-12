@@ -1,4 +1,3 @@
-import Navigation from "./home/navbar";
 import styles from "./page.module.css";
 import Footer from "./home/footer";
 import Features from "./home/features";
@@ -11,12 +10,11 @@ import SectionTwo from "./home/sectionTwo";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Navigation />
       <Header />
-      <Section />
       <Gallery />
       <SectionTwo />
       <Features />
+      <Section title="Works with" />
       <Compatibility />
       <Footer />
     </main>
