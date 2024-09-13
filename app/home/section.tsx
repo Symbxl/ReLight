@@ -7,6 +7,11 @@ interface SectionProps {
   subtitle?: string;
   colorSub?: string;
   secondSub?: string;
+  thirdSub?: string;
+  fourthSub?: String;
+  fithSub?: string;
+  sixthSub?: string;
+  seventhSub?: string;
   titleColor?: string;
   subtitleColor?: string;
   bgColor?: string;
@@ -14,8 +19,8 @@ interface SectionProps {
   showButtons?: boolean;
   buttonText?: string[];
   buttonLinks?: string[];
-  titleSize?: string;
-  subSize?: string;
+  titleSize?: { xs?: string | number, sm?: string | number, md?: string | number };
+  subSize?: { xs?: string | number, sm?: string | number, md?: string | number };
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -23,10 +28,15 @@ const Section: React.FC<SectionProps> = ({
   subtitle,
   colorSub,
   secondSub,
+  thirdSub,
+  fourthSub,
+  fithSub,
+  sixthSub,
+  seventhSub,
   titleColor = "hsl(210, 100%, 50%)",
   subtitleColor = "hsl(210, 100%, 50%)",
-  titleSize = { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
-  subSize = { xs: "1.6rem", sm: "2rem", md: "2.5rem" },
+  titleSize = { xs: "1rem", sm: "1.2rem", md: "1.35rem" }, // Default values with more adaptability
+  subSize = { xs: "1.5rem", sm: "1.9rem", md: "2rem" }, // Default values with more adaptability
   bgColor = "transparent",
   fontFamily = '"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   showButtons = false,
@@ -58,7 +68,6 @@ const Section: React.FC<SectionProps> = ({
         variant="h2"
         color={titleColor}
         sx={{ mb: { xs: 2, sm: 3 } }}
-
       >
         {title}
       </Typography>
@@ -74,10 +83,39 @@ const Section: React.FC<SectionProps> = ({
           component="span"
           sx={{ color: subtitleColor, fontWeight: "700" }}
         >
-          &nbsp;{colorSub}&nbsp;
+          &nbsp;{colorSub}
         </Box>
         <br />
         {secondSub}
+
+        <Box
+          component="span"
+          sx={{ color: subtitleColor, fontWeight: "700" }}
+        >
+          &nbsp;{thirdSub}
+        </Box>
+        <Box
+          component="span"
+          sx={{ fontWeight: "700" }}
+        >
+          &nbsp;{fourthSub}&nbsp;
+        </Box>
+        <br></br>
+        <Box
+          component="span"
+          sx={{ color: subtitleColor, fontWeight: "700" }}        >
+          {fithSub}&nbsp;
+        </Box>
+
+        <Box
+          component="span"
+          color="subtitleColor"
+          sx={{ fontWeight: "700" }}
+        >
+          {sixthSub}&nbsp;
+        </Box>
+        <br></br>
+        {seventhSub}&nbsp;
       </Typography>
       {showButtons && (
         <Grid container spacing={2} sx={{ mt: 2, justifyContent: { xs: 'center', sm: 'flex-start' } }}>
@@ -109,3 +147,4 @@ const Section: React.FC<SectionProps> = ({
 };
 
 export default Section;
+

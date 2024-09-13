@@ -4,7 +4,7 @@ import { Container } from '@mui/material';
 import { SiAmazonalexa } from "react-icons/si";
 import { MdSettingsRemote } from "react-icons/md";
 
-export default function Compatibility() {
+export default function Compatible() {
 
   const data = [
     { id: 1, name: "Google Home", logo: <GoogleIcon /> },

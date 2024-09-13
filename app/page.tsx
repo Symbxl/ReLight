@@ -3,27 +3,27 @@ import Footer from "./home/footer";
 import Features from "./home/features";
 import Header from "./home/header";
 import Compatibility from "./home/compatible";
-import Gallery from "./home/gallery";
 import Section from "./home/section";
 import Title from "./home/title";
 import FAQ from "./home/faq"
+import DisplayMobile from "./home/display-mobile";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <Header />
       <Section
-        title="Download our Mobile App &#8594;"
-        subtitle="Check out our new"
-        colorSub="mobile app"
-        secondSub="and take advantage of Relight's advanced features!"
+        title="Shop by use case"
+        subtitle="Illuminate your"
+        colorSub="Residential or Commericial"
+        secondSub="Property for for every occassion!"
         titleColor="hsl(210, 100%, 50%)"
         subtitleColor="hsl(210, 100%, 50%)"
         bgColor="rgba(0, 0, 0, 0.05)"
         fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
       />
-      <Title title="Works with" fontSize="1.5rem" />
-      <Compatibility />
+      <DisplayMobile />
+
       <Section
         title="Why choose Relight?"
         subtitle="A"
