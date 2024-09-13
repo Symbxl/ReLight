@@ -13,6 +13,16 @@ export default function Home() {
     <main className={styles.main}>
       <Navigation />
       <Header />
+      <Section
+        title="Shop by use case"
+        subtitle="Illuminate your"
+        colorSub="Residential or Commericial"
+        secondSub="Property for every occassion!"
+        titleColor="hsl(210, 100%, 50%)"
+        subtitleColor="hsl(210, 100%, 50%)"
+        bgColor="rgba(0, 0, 0, 0.05)"
+        fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+      />
       <DisplayMobile />
       <Section
         title="Why choose Relight?"
@@ -27,16 +37,6 @@ export default function Home() {
 
       />
       <Features />
-      <Section
-        title="Shop by use case"
-        subtitle="Illuminate your"
-        colorSub="Residential or Commericial"
-        secondSub="Property for every occassion!"
-        titleColor="hsl(210, 100%, 50%)"
-        subtitleColor="hsl(210, 100%, 50%)"
-        bgColor="rgba(0, 0, 0, 0.05)"
-        fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-      />
       <Section
         title="Hidden in plain site"
         subtitle="With our new"

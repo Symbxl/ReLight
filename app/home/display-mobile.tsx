@@ -1,9 +1,11 @@
+"use client"
+
 import Section from "./section";
 import Compatible from "./compatible";
 import { Container } from "@mui/material";
 import CardGrid from "../layouts/card-grid";
 import { PhoneContainer } from "../containers/phone-container";
-
+import PhoneCard from "../components/PhoneCard";
 
 export const DisplayMobile = () => {
   return <Container
@@ -28,13 +30,11 @@ export const DisplayMobile = () => {
       bgColor="rgba(0, 0, 0, 0.05)"
       fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
     />
-    <CardGrid
-      one={<PhoneContainer image="https://framerusercontent.com/images/BzFcQ6E4kSLCxqDCW5lcozO5c.jpeg?scale-down-to=2048" light="A bright new future." dark="We've rebuilt everything from the ground up. New interactions. New visuals. New experience." />}
-      two={<PhoneContainer height="325px" image="https://framerusercontent.com/images/F5OouxHM5wQ9YukLJCgs65g.jpeg" light="Discover new tricks & tips." dark=" Learn how to use your lights in various tutorials in the Discover tab." />
-      }
-      three={<PhoneContainer height="325px" image="https://framerusercontent.com/images/BzFcQ6E4kSLCxqDCW5lcozO5c.jpeg?scale-down-to=2048" />
-      }
-    />
+    <PhoneContainer url="https://framerusercontent.com/assets/Y5JWtBxLLnL6s4zRbzM7VCniWMs.mp4" />
+    <PhoneContainer img="true" height="300px" url="https://framerusercontent.com/images/X8VEE7Yik9551XzG9IrdbAZlW6s.png" />
+    <PhoneContainer height="400px" url="https://framerusercontent.com/assets/CnWUhUcmtTb0Rbm4kiNDNpmqQM.mp4" />
+    <PhoneContainer height="400px" url="https://framerusercontent.com/assets/oSPfjWZjyWhxagYjX0K4KWkvZY.mp4" />
+    <PhoneContainer url="https://framerusercontent.com/assets/KmelkH2boHOSWVkOcfFQRJ3Lpfo.mp4" />
     <Compatible />
   </Container >
 }

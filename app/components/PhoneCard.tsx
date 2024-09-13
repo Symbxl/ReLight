@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { Box } from '@mui/material';
+import ReactPlayer from 'react-player';
 
-const PhoneCard: React.FC = ({ image, height = '844px' }: any) => {
+const PhoneCard: React.FC = ({ img, url, height = '844px' }: any) => {
   return (
     <Box
       sx={{
@@ -29,15 +30,27 @@ const PhoneCard: React.FC = ({ image, height = '844px' }: any) => {
           position: 'relative',
         }}
       >
-        <img
-          src={image}
+        {img ? <img
+          src={url}
           alt="iPhone Background"
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            borderRadius: '45px', // Match inner screen border radius
           }}
+        /> : <ReactPlayer
+          url={url}
+          playing
+          loop
+          muted
+          width="100%"
+          height="100%"
+          style={{ borderRadius: '45px' }}
         />
+        }
+
+
       </Box>
       <Box
         sx={{

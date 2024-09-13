@@ -1,13 +1,12 @@
 import PhoneCard from "../components/PhoneCard";
 import { Container, Typography, Box } from "@mui/material";
 import '@fontsource/roboto'; // Import Roboto font
-import { CenterFocusStrong } from "@mui/icons-material";
 
 interface PhoneContainerProps {
   image: string;
 }
 
-export const PhoneContainer: React.FC<PhoneContainerProps> = ({ image, height }) => {
+export const PhoneContainer: React.FC<PhoneContainerProps> = ({ img, url, height }) => {
   return (
     <Container
       sx={{
@@ -54,7 +53,7 @@ export const PhoneContainer: React.FC<PhoneContainerProps> = ({ image, height })
       </Typography>
 
       {/* PhoneCard Component */}
-      <PhoneCard height={height} image={image} />
+      <PhoneCard height={height} url={url} img={img} />
     </Container>
   );
 };
