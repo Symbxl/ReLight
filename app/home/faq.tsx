@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
 import { Grid, Accordion, AccordionSummary, AccordionDetails, Typography, Box } from '@mui/material';
@@ -41,50 +41,56 @@ const FAQ = () => {
   return (
     <Box
       sx={{
-        maxWidth: 'var(--max-width)',
+        maxWidth: '1200px',
         margin: 'auto',
-        padding: 4,
-        borderRadius: 'var(--border-radius)',
+        padding: { xs: 2, md: 4 },
+        borderRadius: '12px',
         backgroundColor: 'black',
         color: 'white',
         boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.2)',
+        textAlign: 'center', // Center text within the box
       }}
     >
+      <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: 4, color: 'white' }}>
+        Frequently Asked Questions
+      </Typography>
       <Grid
         container
         spacing={2}
+        justifyContent="center" // Center horizontally
+        alignItems="center" // Center vertically
         direction="row"
         sx={{
           '@media (min-width:600px)': {
-            gridTemplateColumns: '1fr 1fr', // Two columns layout
+            gridTemplateColumns: 'repeat(2, 1fr)', // Two columns for larger screens
           },
           '@media (max-width:600px)': {
-            gridTemplateColumns: '1fr', // Single column layout for mobile
+            gridTemplateColumns: '1fr', // One column for smaller screens
           },
         }}
       >
         {faqData.map((faq, index) => (
-          <Grid item xs={12} md={6} key={index} sx={{ marginBottom: 2 }}>
+          <Grid item xs={12} sm={6} key={index}>
             <Accordion
               expanded={expanded === `panel${index}`}
               onChange={handleChange(`panel${index}`)}
               sx={{
-                borderRadius: 'var(--border-radius)',
+                backgroundColor: 'black',
+                color: 'white',
+                marginBottom: 2,
                 boxShadow: 'none',
-                marginBottom: 1,
+                borderRadius: '8px',
                 '&:before': {
                   display: 'none',
                 },
-                backgroundColor: 'black',
-                color: 'white',
               }}
             >
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />} // Set the expand icon color to white
+                expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
                 sx={{
-                  fontFamily: 'var(--font-mono)',
+                  fontFamily: `"General Sans", sans-serif`,
                   fontWeight: 'bold',
-                  fontSize: '1.25rem',
+                  fontSize: '1.2rem',
                   color: 'white',
                   '& .MuiAccordionSummary-content': {
                     margin: 0,
@@ -95,10 +101,9 @@ const FAQ = () => {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  fontFamily: 'var(--font-mono)',
+                  fontFamily: `"General Sans", sans-serif`,
                   fontSize: '1rem',
                   color: 'white',
-                  backgroundColor: 'black',
                 }}
               >
                 <Typography>{faq.answer}</Typography>

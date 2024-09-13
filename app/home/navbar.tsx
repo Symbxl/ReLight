@@ -4,9 +4,8 @@ export default function Navigation() {
   return (
     <div className={styles.navigation}>
       <p>
-        Download our &nbsp;
-        <code className={styles.app}>MOBILE APP</code>
-        &nbsp; today!
+        Now servicing in
+        <code className={styles.app}> Alberta, Canada!</code>
       </p>
     </div >
   )
