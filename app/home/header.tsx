@@ -1,4 +1,4 @@
-import SectionThree from "./sectionThree";
+import Section from "./section";
 import Navigation from "./navbar";
 import { Container } from "@mui/material";
 
@@ -20,7 +20,19 @@ export default function Header() {
       }}
     >
       <Navigation />
-      <SectionThree />
+      <Section
+        subtitle="Live brighter with"
+        secondSub="Relight permanent outdoor lighting."
+        titleColor="#fff"
+        subtitleColor="#fff"
+        bgColor="transparent" // Set background color if needed
+        fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+        showButtons={true}
+        buttonText={["Get a Quote", "Contact Us"]}
+        buttonLinks={["#quote", "#contact"]}
+        titleSize={{ xs: "1.rem", sm: "1.3rem", md: "1.5rem" }}
+        subSize={{ xs: "3rem", sm: "3.5rem", md: "4rem" }}
+      />
     </Container>
   );
 }
