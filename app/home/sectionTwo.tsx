@@ -1,6 +1,28 @@
-import { Container, Typography, Box } from "@mui/material";
+import React from 'react';
+import { Container, Typography, Box } from '@mui/material';
 
-const SectionTwo = () => {
+// Define the type for props
+interface SectionTwoProps {
+  title?: string;
+  titleTwo?: String;
+  colorTitle?: String;
+  subtitle?: string;
+  titleColor?: string;
+  subtitleColor?: string;
+  bgColor?: string;
+  fontFamily?: string;
+}
+
+const SectionTwo: React.FC<SectionTwoProps> = ({
+  title,
+  titleTwo,
+  colorTitle,
+  subtitle,
+  titleColor = "hsl(210, 100%, 50%)",
+  subtitleColor = "hsl(210, 100%, 50%)",
+  bgColor,
+  fontFamily = '"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+}) => {
   return (
     <Container
       sx={{
@@ -11,40 +33,40 @@ const SectionTwo = () => {
         textAlign: "left", // Align text to the left
         paddingX: { xs: 2, sm: 4 },
         paddingY: { xs: 3, sm: 6 },
-        margin: { xs: "1rem 0", sm: "2rem 0" },
+        margin: { xs: "1rem 0 0 0", sm: "1rem 0 0 0" },
         maxWidth: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.05)", // Light background color
+        backgroundColor: bgColor,
         borderRadius: "8px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         paddingLeft: { xs: 2, sm: 4 },
       }}
     >
       <Typography
-        fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-        fontWeight="500"
+        fontFamily={fontFamily}
+        fontWeight="700"
         fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }} // Responsive font size
         variant="h2"
-        color="hsl(210, 100%, 50%)"
+        color={titleColor}
         sx={{ mb: { xs: 2, sm: 3 } }}
       >
-        Why choose Relight?
+        {title}
       </Typography>
       <Typography
-        fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+        fontFamily={fontFamily}
         fontWeight="700"
         fontSize={{ xs: "1.6rem", sm: "2rem", md: "2.5rem" }} // Responsive font size
         variant="h2"
         sx={{ mb: { xs: 3, sm: 4 } }}
       >
-        A
+        {titleTwo}
         <Box
           component="span"
-          sx={{ color: "hsl(210, 100%, 50%)", fontWeight: "700" }}
+          sx={{ color: subtitleColor, fontWeight: "700" }}
         >
-          &nbsp;delightful experience&nbsp;
+          &nbsp;{colorTitle}&nbsp;
         </Box>
         <br />
-        for you and your community
+        {subtitle}
       </Typography>
     </Container>
   );

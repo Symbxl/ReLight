@@ -3,6 +3,7 @@ import styles from "../page.module.css";
 import { Container } from '@mui/material';
 import { SiAmazonalexa } from "react-icons/si";
 import { MdSettingsRemote } from "react-icons/md";
+import SectionTwo from './sectionTwo';
 
 export default function Compatibility() {
 
