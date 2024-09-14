@@ -4,7 +4,12 @@ import React from 'react';
 import { Box } from '@mui/material';
 import ReactPlayer from 'react-player';
 
-const PhoneCard: React.FC = ({ img, url, height = '844px' }: any) => {
+interface Props {
+  img?: string;
+  url?: string;
+  height?: any;
+}
+const PhoneCard: React.FC = ({ img, url, height = '844px' }: Props) => {
   return (
     <Box
       sx={{

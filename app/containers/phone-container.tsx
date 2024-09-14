@@ -3,11 +3,11 @@ import { Container, Typography, Box } from "@mui/material";
 import '@fontsource/roboto';
 
 interface Props {
-  img: string;
-  height: string;
-  url: string;
-  title: string;
-  subtitle: string;
+  img?: string;
+  height?: string;
+  url?: string;
+  title?: string;
+  subtitle?: string;
 }
 
 export const PhoneContainer = ({ img, url, height, title, subtitle }: Props) => {
