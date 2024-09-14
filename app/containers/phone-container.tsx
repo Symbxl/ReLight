@@ -4,7 +4,7 @@ import '@fontsource/roboto';
 
 interface Props {
   img?: string;
-  height?: string;
+  height?: any;
   url?: string;
   title?: string;
   subtitle?: string;
