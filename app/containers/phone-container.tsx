@@ -1,12 +1,12 @@
 import PhoneCard from "../components/PhoneCard";
 import { Container, Typography, Box } from "@mui/material";
-import '@fontsource/roboto'; // Import Roboto font
+import '@fontsource/roboto';
 
 interface PhoneContainerProps {
   image: string;
 }
 
-export const PhoneContainer: React.FC<PhoneContainerProps> = ({ img, url, height }) => {
+export const PhoneContainer: React.FC<PhoneContainerProps> = ({ img, url, height, title, subtitle }: any) => {
   return (
     <Container
       sx={{
@@ -21,23 +21,23 @@ export const PhoneContainer: React.FC<PhoneContainerProps> = ({ img, url, height
         boxShadow: '0 4px 8px rgba(var(--foreground-rgb), 0.2)',
         textAlign: 'center',
         alignItems: 'center',
+        width: "425px"
 
       }}
     >
-      {/* Combined title and description */}
       <Typography
         variant="h5"
         sx={{
-          fontFamily: 'Roboto, Arial, sans-serif', // Use Roboto font
-          fontWeight: 'bold', // Title weight
+          fontFamily: 'Roboto, Arial, sans-serif',
+          fontWeight: 'bold',
           fontSize: '1.3rem',
-          color: 'rgba(var(--foreground-rgb), 1)', // Title color
+          color: 'rgba(var(--foreground-rgb), 1)',
           lineHeight: 1.4,
-          marginBottom: '1rem', // Space below the text
-          display: 'block', // Ensure the block behavior
+          marginBottom: '1rem',
+          display: 'block',
         }}
       >
-        A Bright New Future.&nbsp;
+        {title}&nbsp;
         <Box
           component="span"
           sx={{
@@ -48,7 +48,7 @@ export const PhoneContainer: React.FC<PhoneContainerProps> = ({ img, url, height
             marginTop: '0.5rem', // Space between title and description
           }}
         >
-          We've rebuilt everything from the ground up. New interactions. New visuals. New experience.
+          {subtitle}
         </Box>
       </Typography>
 

@@ -11,7 +11,6 @@ import DisplayFAQ from "./home/display-faq";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Navigation />
       <Header />
       <Section
         title="Shop by use case"

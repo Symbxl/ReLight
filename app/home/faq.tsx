@@ -21,14 +21,7 @@ const faqData = [
     question: "What payment methods do you accept?",
     answer: "We accept Visa, MasterCard, American Express, and PayPal."
   },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept Visa, MasterCard, American Express, and PayPal."
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept Visa, MasterCard, American Express, and PayPal."
-  },
+  // Removed duplicate entries
 ];
 
 const FAQ = () => {
@@ -41,31 +34,28 @@ const FAQ = () => {
   return (
     <Box
       sx={{
-        maxWidth: '1200px',
         margin: 'auto',
         padding: { xs: 2, md: 4 },
         borderRadius: '12px',
-        backgroundColor: 'black',
-        color: 'white',
+        color: '#E0E0E0', // Light text
         boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.2)',
         textAlign: 'center', // Center text within the box
+        fontFamily: '"Roboto", sans-serif', // Updated font
       }}
     >
-      <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: 4, color: 'white' }}>
+      <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: 4, fontWeight: '700' }}>
         Frequently Asked Questions
       </Typography>
       <Grid
         container
         spacing={2}
-        justifyContent="center" // Center horizontally
-        alignItems="center" // Center vertically
+        justifyContent="center"
+        alignItems="center"
         direction="row"
         sx={{
-          '@media (min-width:600px)': {
-            gridTemplateColumns: 'repeat(2, 1fr)', // Two columns for larger screens
-          },
-          '@media (max-width:600px)': {
-            gridTemplateColumns: '1fr', // One column for smaller screens
+          gridTemplateColumns: {
+            xs: '1fr', // One column for smaller screens
+            sm: 'repeat(auto-fit, minmax(300px, 1fr))', // Responsive columns for larger screens
           },
         }}
       >
@@ -75,8 +65,8 @@ const FAQ = () => {
               expanded={expanded === `panel${index}`}
               onChange={handleChange(`panel${index}`)}
               sx={{
-                backgroundColor: 'black',
-                color: 'white',
+                backgroundColor: '#2C2C2C', // Slightly lighter dark background
+                color: '#E0E0E0', // Light text
                 marginBottom: 2,
                 boxShadow: 'none',
                 borderRadius: '8px',
@@ -86,12 +76,11 @@ const FAQ = () => {
               }}
             >
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                expandIcon={<ExpandMoreIcon sx={{ color: '#E0E0E0' }} />}
                 sx={{
-                  fontFamily: `"General Sans", sans-serif`,
-                  fontWeight: 'bold',
+                  fontWeight: '700',
                   fontSize: '1.2rem',
-                  color: 'white',
+                  color: '#E0E0E0',
                   '& .MuiAccordionSummary-content': {
                     margin: 0,
                   },
@@ -101,9 +90,8 @@ const FAQ = () => {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  fontFamily: `"General Sans", sans-serif`,
                   fontSize: '1rem',
-                  color: 'white',
+                  color: '#E0E0E0',
                 }}
               >
                 <Typography>{faq.answer}</Typography>

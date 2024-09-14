@@ -1,24 +1,36 @@
+"use client"
 import Section from "./section";
 import { Container } from "@mui/material";
-import { BtnContainer } from "../containers/button-container";
-import Button from "../common/button";
+import Navigation from "./navbar"
 
 export default function Header() {
   return (
     <Container
       sx={{
-        padding: "1rem",
+        position: "relative",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        padding: "3rem",
+        overflow: "hidden",
       }}
     >
+      <Navigation />
+
       <Section
         subtitle="Live brighter with"
         secondSub="Relight Exterior Lighting"
         titleColor="#fff"
         subtitleColor="#fff"
-        bgColor="transparent" // Set background color if needed
+        bgColor="transparent" // Keep it transparent to allow the video to show through
         fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-        titleSize={{ xs: "1.rem", sm: "1.3rem", md: "1.5rem" }}
+        titleSize={{ xs: "1.5rem", sm: "2rem", md: "2.5rem" }}
         subSize={{ xs: "3rem", sm: "4rem", md: "4.5rem" }}
+        sx={{
+          zIndex: 1, // Ensure the content stays above the video
+          position: "relative",
+          textAlign: "center",
+        }}
       />
     </Container>
   );
