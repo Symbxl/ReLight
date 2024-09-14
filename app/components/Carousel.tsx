@@ -3,13 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardMedia, Box } from '@mui/material';
 
+interface Props {
+  images: string[]
+}
 const Carousel = ({ images = [
   'https://framerusercontent.com/images/wLje8qwBe008yFn2ia6gkCEMs.webp?scale-down-to=1024',
   'https://framerusercontent.com/images/wLje8qwBe008yFn2ia6gkCEMs.webp?scale-down-to=1024',
   'https://framerusercontent.com/images/wLje8qwBe008yFn2ia6gkCEMs.webp?scale-down-to=1024',
   'https://framerusercontent.com/images/wLje8qwBe008yFn2ia6gkCEMs.webp?scale-down-to=1024',
   'https://framerusercontent.com/images/wLje8qwBe008yFn2ia6gkCEMs.webp?scale-down-to=1024'
-] }: any) => {
+] }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const handleClick = (index: number) => {
     setCurrentIndex(index);

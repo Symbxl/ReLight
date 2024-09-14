@@ -2,11 +2,15 @@ import PhoneCard from "../components/PhoneCard";
 import { Container, Typography, Box } from "@mui/material";
 import '@fontsource/roboto';
 
-interface PhoneContainerProps {
-  image: string;
+interface Props {
+  img: string;
+  height: string;
+  url: string;
+  title: string;
+  subtitle: string;
 }
 
-export const PhoneContainer: React.FC<PhoneContainerProps> = ({ img, url, height, title, subtitle }: any) => {
+export const PhoneContainer = ({ img, url, height, title, subtitle }: Props) => {
   return (
     <Container
       sx={{
@@ -42,10 +46,10 @@ export const PhoneContainer: React.FC<PhoneContainerProps> = ({ img, url, height
           component="span"
           sx={{
             fontWeight: 'normal',
-            color: 'rgba(var(--foreground-rgb), 0.7)', // Description color
+            color: 'rgba(var(--foreground-rgb), 0.7)',
             fontSize: '1.2rem',
             lineHeight: 1.4,
-            marginTop: '0.5rem', // Space between title and description
+            marginTop: '0.5rem',
           }}
         >
           {subtitle}
