@@ -2,17 +2,8 @@ import PhoneCard from "../components/PhoneCard";
 import { Container, Typography, Box } from "@mui/material";
 import '@fontsource/roboto';
 
-// Defining the Props interface
-interface Props {
-  img?: string | JSX.Element | boolean; // Image URL (optional)
-  height?: string | number | JSX.Element; // Can be either a string (e.g., "300px") or a number (e.g., 300)
-  url?: string; // Video or image URL (optional)
-  title?: string; // Title for the card (optional)
-  subtitle?: string; // Subtitle for the card (optional)
-}
 
-// Defining the PhoneContainer functional component with Props
-export const PhoneContainer: React.FC<Props> = ({ img, url, height, title, subtitle }) => {
+export const PhoneContainer = ({ img, url, height, title, subtitle }) => {
   return (
     <Container
       sx={{
@@ -30,7 +21,6 @@ export const PhoneContainer: React.FC<Props> = ({ img, url, height, title, subti
         width: '100%',
       }}
     >
-      {/* Title and Subtitle Typography */}
       <Typography
         variant="h5"
         sx={{
@@ -56,7 +46,6 @@ export const PhoneContainer: React.FC<Props> = ({ img, url, height, title, subti
         </Box>
       </Typography>
 
-      {/* Rendering the PhoneCard component with height, url, and img */}
       <PhoneCard height={height} url={url} img={img} />
     </Container>
   );
