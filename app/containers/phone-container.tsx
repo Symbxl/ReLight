@@ -2,15 +2,17 @@ import PhoneCard from "../components/PhoneCard";
 import { Container, Typography, Box } from "@mui/material";
 import '@fontsource/roboto';
 
+// Defining the Props interface
 interface Props {
-  img?: string;
-  height?: any;
-  url?: string;
-  title?: string;
-  subtitle?: string;
+  img?: string | JSX.Element | boolean; // Image URL (optional)
+  height?: string | number | JSX.Element; // Can be either a string (e.g., "300px") or a number (e.g., 300)
+  url?: string; // Video or image URL (optional)
+  title?: string; // Title for the card (optional)
+  subtitle?: string; // Subtitle for the card (optional)
 }
 
-export const PhoneContainer = ({ img, url, height, title, subtitle }: Props) => {
+// Defining the PhoneContainer functional component with Props
+export const PhoneContainer: React.FC<Props> = ({ img, url, height, title, subtitle }) => {
   return (
     <Container
       sx={{
@@ -21,14 +23,14 @@ export const PhoneContainer = ({ img, url, height, title, subtitle }: Props) => 
         border: '1px solid rgba(var(--callout-border-rgb), 0.4)',
         borderRadius: 'var(--border-radius)',
         margin: 2,
-        maxWidth: 'var(--max-width)',
+        maxWidth: '425px',
         boxShadow: '0 4px 8px rgba(var(--foreground-rgb), 0.2)',
         textAlign: 'center',
         alignItems: 'center',
-        width: "425px"
-
+        width: '100%',
       }}
     >
+      {/* Title and Subtitle Typography */}
       <Typography
         variant="h5"
         sx={{
@@ -38,7 +40,6 @@ export const PhoneContainer = ({ img, url, height, title, subtitle }: Props) => 
           color: 'rgba(var(--foreground-rgb), 1)',
           lineHeight: 1.4,
           marginBottom: '1rem',
-          display: 'block',
         }}
       >
         {title}&nbsp;
@@ -49,14 +50,13 @@ export const PhoneContainer = ({ img, url, height, title, subtitle }: Props) => 
             color: 'rgba(var(--foreground-rgb), 0.7)',
             fontSize: '1.2rem',
             lineHeight: 1.4,
-            marginTop: '0.5rem',
           }}
         >
           {subtitle}
         </Box>
       </Typography>
 
-      {/* PhoneCard Component */}
+      {/* Rendering the PhoneCard component with height, url, and img */}
       <PhoneCard height={height} url={url} img={img} />
     </Container>
   );

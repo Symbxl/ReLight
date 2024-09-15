@@ -12,7 +12,7 @@ interface SectionProps {
   fithSub?: string;
   sixthSub?: string;
   seventhSub?: string;
-  margin?: top;
+  margin?: string;
   titleColor?: string;
   subtitleColor?: string;
   bgColor?: string;

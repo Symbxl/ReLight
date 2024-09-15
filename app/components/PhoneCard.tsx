@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player';
 interface Props {
   img?: string;
   url?: string;
-  height?: any;
+  height?: string | JSX.Element;
 }
 const PhoneCard: React.FC = ({ img, url, height = '844px' }: Props) => {
   return (
