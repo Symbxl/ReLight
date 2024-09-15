@@ -4,8 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardMedia, Box } from '@mui/material';
 
 interface Props {
-  images: string[]
+  images?: string[]
 }
+
 const Carousel = ({ images = [
   'https://framerusercontent.com/images/wLje8qwBe008yFn2ia6gkCEMs.webp?scale-down-to=1024',
   'https://framerusercontent.com/images/wLje8qwBe008yFn2ia6gkCEMs.webp?scale-down-to=1024',
@@ -31,7 +32,7 @@ const Carousel = ({ images = [
           flex: '0 0 100%',
         }}
       >
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <Card
             key={index}
             sx={{
