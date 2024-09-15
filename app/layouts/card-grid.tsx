@@ -13,17 +13,8 @@ const PhoneCardLayout = () => {
   return (
     <Box
       sx={{
-        display: 'grid',
-        gridTemplateColumns: {
-          xs: 'repeat(auto-fill, minmax(350px, 1fr))', // Auto-adjusting columns for small screens
-          sm: 'repeat(auto-fill, minmax(400px, 1fr))',
-          md: 'repeat(auto-fill, minmax(450px, 1fr))',
-          lg: 'repeat(auto-fill, minmax(500px, 1fr))',
-        },
-        gap: '10px', // Space between cards
-        width: '100%',
-        padding: '10px', // Padding around the grid
-        boxSizing: 'border-box',
+        display: 'flex',
+        flexDirection: 'column'
       }}
     >
       {phoneData.map((phone, index) => (

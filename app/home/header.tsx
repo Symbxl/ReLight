@@ -26,6 +26,7 @@ export default function Header() {
         fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
         titleSize={{ xs: "1.5rem", sm: "2rem", md: "2.5rem" }}
         subSize={{ xs: "3rem", sm: "4rem", md: "4.5rem" }}
+
       />
     </Container>
   );
